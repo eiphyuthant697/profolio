@@ -1,0 +1,614 @@
+/* =========================
+   Base
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eeeeee;
+}
+
+.nav {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav nav a {
+    font-size: 14px;
+    color: #555;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.nav nav a:hover {
+    color: #000;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    background: #111111;
+    color: white;
+}
+
+.hero-content {
+    padding: 100px 0;
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.eyebrow {
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #999;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 18px;
+    color: #bbbbbb;
+
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 4px;
+
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: white;
+    color: #111;
+}
+
+.btn-primary:hover {
+    background: #dddddd;
+}
+
+.btn-secondary {
+    border: 1px solid #555;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-dark {
+    background: #111111;
+    color: white;
+}
+
+.section-label {
+    color: #888;
+    margin-bottom: 18px;
+}
+
+.section h2 {
+    max-width: 700px;
+
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 55px;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #eeeeee;
+    margin-bottom: 25px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+/* =========================
+   About
+========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* About Text */
+
+.about-text {
+    padding-top: 5px;
+}
+
+.about-text p {
+    max-width: 650px;
+
+    font-size: 18px;
+    color: #555;
+
+    margin-bottom: 22px;
+}
+
+
+/* Profile */
+
+.about-profile {
+    width: 100%;
+}
+
+
+/* Profile Image */
+
+.profile-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+
+    background: #eeeeee;
+
+    max-height: 250px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* About Information */
+
+.about-info {
+    border-top: 1px solid #ddd;
+}
+
+.about-info div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.about-info strong {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.about-info span {
+    color: #777;
+    font-size: 13px;
+    text-align: right;
+}
+
+
+/* =========================
+   Skills
+========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: #333;
+}
+
+.skill-card {
+    background: #111;
+    padding: 35px;
+    min-height: 180px;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Projects
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #e5e5e5;
+
+    padding: 30px;
+
+    min-height: 350px;
+
+    transition: 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #111;
+}
+
+.project-number {
+    font-size: 13px;
+    color: #999;
+
+    margin-bottom: 50px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tags span {
+    font-size: 11px;
+
+    padding: 5px 9px;
+
+    border: 1px solid #ddd;
+    border-radius: 20px;
+
+    color: #555;
+}
+
+
+/* =========================
+   Experience
+========================= */
+
+.timeline {
+    max-width: 850px;
+}
+
+.timeline-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 20px 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 60px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 15px;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #444;
+}
+
+.timeline-dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    margin-top: 7px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.timeline-company {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.timeline-item p:last-child {
+    color: #aaa;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact-section {
+    padding: 130px 0;
+
+    background: #f3f3f3;
+
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 750px;
+}
+
+.contact-section .section-label {
+    color: #888;
+}
+
+.contact-section h2 {
+    font-size: clamp(40px, 6vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contact-email {
+    display: inline-block;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    border-bottom: 2px solid #111;
+
+    margin-bottom: 35px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background: #111;
+    color: #777;
+
+    padding: 25px 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav {
+        height: auto;
+        padding: 20px 0;
+
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .nav nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav nav {
+        justify-content: flex-start;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .contact-email {
+        font-size: 17px;
+    }
+
+}
