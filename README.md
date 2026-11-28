@@ -69,9 +69,9 @@ Web Developer
 
 Here are some of my selected projects:
 
-| Project | Description | Technologies |
+| Project | Description | Technologies | Project Readme
 
-| WordPress Custom Development | Custom WordPress functionality and form development | PHP, WordPress, MySQL |
+| WordPress Custom Development | Custom WordPress functionality and form development | PHP, WordPress, MySQL | https://github.com/eiphyuthant697/singapore-design-biennale-2027/blob/main/readme.md
 | WooCommerce Customization | E-commerce functionality and customization | PHP, WooCommerce |
 | REST API Development | Backend API development and integration | REST API |
 
